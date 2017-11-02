@@ -8,8 +8,6 @@ var allGuesses = [];
 var images = ['images/full-bar.png', 'images/lose-one.png', 'images/lose-two.png', 'images/lose-three.png', 'images/lose-four.png', 'images/lose-five.png', 'images/you-lost.png']
 var wrongCount = 0;
 var rightCount = 0;
-var Heading = "";
-var Message = '';
 
 
 document.onreadystatechange = function() {
@@ -83,6 +81,7 @@ function makeGuess(event) {
 				wrongCount++;
 				displayWrongLetters();
 				showImage();
+				checkForLose();
 
 			}
 		}
@@ -96,6 +95,17 @@ function checkForWin() {
 	var winningMessage = "Let's play again! Click the New Game button."
 	var winner = wordPicked.length;
 	if (winner == rightCount) {
+		updateHeading.innerHTML = winningHeading;
+		updateMessage.innerHTML = winningMessage;
+	}
+}
+
+function checkForLose() {
+	var updateHeading = document.getElementById('heading');
+	var updateMessage = document.getElementById('message');
+	var winningHeading = "You Lost :("
+	var winningMessage = " Better luck neck time. Let's play again! Click the New Game button."
+	if (wrongCount > 6) {
 		updateHeading.innerHTML = winningHeading;
 		updateMessage.innerHTML = winningMessage;
 	}
@@ -119,9 +129,9 @@ function displayWrongLetters () {
 		wrongLetters.innerHTML = cutOff.join('  ');
 }
 
-
-//NEEDS SERIOUS WORK
 function resetText () {
+	var updateHeading = document.getElementById('heading');
+	var updateMessage = document.getElementById('message');
 	var winningHeading = "Let's Play!";
 	var winningMessage = "Guess my word correctly or lose your beer. Once you're out of beer the game is over.";
 	updateHeading.innerHTML = winningHeading;

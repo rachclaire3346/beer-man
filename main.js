@@ -104,8 +104,8 @@ function checkForLose() {
 	var updateHeading = document.getElementById('heading');
 	var updateMessage = document.getElementById('message');
 	var winningHeading = "You Lost :("
-	var winningMessage = " Better luck neck time. Let's play again! Click the New Game button."
-	if (wrongCount > 6) {
+	var winningMessage = " Better luck next time. Let's play again! Click the New Game button."
+	if (wrongCount >= 6) {
 		updateHeading.innerHTML = winningHeading;
 		updateMessage.innerHTML = winningMessage;
 	}

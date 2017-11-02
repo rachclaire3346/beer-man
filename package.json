@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rachclaire3346/Ice-cream-Shop-Menu.git"
+    "url": "git+https://github.com/rachclaire3346/beer-man"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rachclaire3346/Ice-cream-Shop-Menu/issues"
+    "url": "https://github.com/rachclaire3346/beer-man/issues"
   },
-  "homepage": "https://github.com/rachclaire3346/Ice-cream-Shop-Menu#readme",
+  "homepage": "https://github.com/rachclaire3346/beer-man#readme",
   "dependencies": {
     "express": "^4.16.0"
   }

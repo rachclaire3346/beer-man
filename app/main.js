@@ -30,6 +30,7 @@ function startGame() {
 	for (var i = 0; i < wordLength; i++) {
 		wordList.appendChild(createListItem(i));
 	}
+	rightCount = 0;
 	wrongCount = 0;
 	wrongGuesses = [];
 	displayWrongLetters();
@@ -82,6 +83,7 @@ function makeGuess(event) {
 				displayWrongLetters();
 				showImage();
 				checkForLose();
+				checkForWin();
 
 			}
 		}

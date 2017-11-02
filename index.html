@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Beerman</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>Beerman</h1>
+
+	<div class=image>
+		<img  id="pictures" src="images/full-bar.png" alt="full bar" style="width:800px;height:325px;">
+	</div>	
+
+	
+	<div class="row justify-content-center">
+
+		<div class="col mt-5">
+
+			<div class="wrongLetters">
+
+				<h3 class="mt-3">Wrong Letters</h3>
+				<p id="showWrongLetters"></p>
+
+			</div>
+
+		</div>
+
+		<div class="col-4.5">
+
+			<div class="start mt-4">
+			    <button class="button" id="restartButton" onClick="js:"><p class="starter mt-3">New Game</p></button>
+			</div>
+
+			<div class="userInput mt-2">
+				<input id="letterGuess" type="text">
+			</div>
+
+			<div class="word">
+				<ul id="listLetters">
+				</ul>
+			</div>
+
+		</div>
+		
+		<div class="col mt-5">
+
+			<div class="wrongLetters">
+
+				<h3 class="mt-3" id="heading">Let's Play!</h3>
+				<p id="message">Guess my word correctly or lose your beer. Once you're out of beer the game is over.</p>
+
+			</div>
+
+		</div>	
+	</div>	
+
+	<script src="main.js"></script>
+
+</body>
+</html>

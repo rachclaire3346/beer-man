@@ -18,7 +18,7 @@
 	
 	<div class="row justify-content-center">
 
-		<div class="col mt-5">
+		<div class="col-sm-12 col-md mt-5">
 
 			<div class="wrongLetters">
 
@@ -36,7 +36,7 @@
 			</div>
 
 			<div class="userInput mt-2">
-				<input id="letterGuess" type="text">
+				<input id="letterGuess" type="text" onkeydown="if(event.keycode == 13)" {makeGuess();}>
 			</div>
 
 			<div class="word mt-3">
@@ -46,7 +46,7 @@
 
 		</div>
 		
-		<div class="col mt-5">
+		<div class="col-sm-12 col-md mt-5">
 
 			<div class="wrongLetters">
 

@@ -1,5 +1,6 @@
 var restartButton = document.getElementById('restartButton');
-var words = ['popcorn', 'penguin', 'lollipop', 'circus', 'ocean', 'reporter', 'pizzeria', 'dangerous', 'donkey', 'guarantee', 'costume', 'evacuate', 'volcano', 'unicorn', 'reptile', 'octopus', 'galactic', 'hypnotic', 'jigsaw', 'venus', 'eruption', 'emu'];
+var words = ['brewery', 'beercheese', 'pretzel', 'bar', 'darts', 'ale', 'octoberfest', 'barley', 'hops', 'barrel', 'ferment', 'pub', 'draft', 'grains', 'lager', 'yeast', 'malt', 'microbrewery']
+//var words = ['popcorn', 'penguin', 'lollipop', 'circus', 'ocean', 'reporter', 'pizzeria', 'dangerous', 'donkey', 'guarantee', 'costume', 'evacuate', 'volcano', 'unicorn', 'reptile', 'octopus', 'galactic', 'hypnotic', 'jigsaw', 'venus', 'eruption', 'emu'];
 var wordPicked = '';
 var wordList = document.getElementById('listLetters');
 var letterGuessInput = document.getElementById('letterGuess');
@@ -37,7 +38,7 @@ function startGame() {
 	allGuesses = [];
 	showImage();
 	resetText ();
-}
+};
 
 function pickWord() {
 	 
@@ -46,7 +47,7 @@ function pickWord() {
 	 var randomIndex = Math.floor(Math.random() * (max - min) + min);
 	 return words[randomIndex];
 
-}
+};
 
 function createListItem(index) {
 
@@ -54,7 +55,7 @@ function createListItem(index) {
 	li.setAttribute("id", "item_" + index);
 	li.setAttribute("class", "wordListItem");
  	return li;
-}
+};
 
 function makeGuess(event) {
 	// Grab everything by class name "wordlistItem" and put it into the array listItem
@@ -88,7 +89,7 @@ function makeGuess(event) {
 			}
 		}
 	}
-}
+};
 
 function checkForWin() {
 	var updateHeading = document.getElementById('heading');
@@ -100,7 +101,7 @@ function checkForWin() {
 		updateHeading.innerHTML = winningHeading;
 		updateMessage.innerHTML = winningMessage;
 	}
-}
+};
 
 function checkForLose() {
 	var updateHeading = document.getElementById('heading');
@@ -111,7 +112,7 @@ function checkForLose() {
 		updateHeading.innerHTML = winningHeading;
 		updateMessage.innerHTML = winningMessage;
 	}
-}
+};
 
 
 function showImage() {
@@ -120,7 +121,7 @@ function showImage() {
 	if (wrongCount > 6) {
 		barPicture.setAttribute('src', images[6]);
 	}
-}
+};
 
 function displayWrongLetters () {
 	var wrongLetters = document.getElementById('showWrongLetters');
@@ -129,7 +130,7 @@ function displayWrongLetters () {
 	else (wrongGuesses.length > 6)
 		var cutOff = wrongGuesses.slice(0, 6);
 		wrongLetters.innerHTML = cutOff.join('  ');
-}
+};
 
 function resetText () {
 	var updateHeading = document.getElementById('heading');
@@ -138,7 +139,7 @@ function resetText () {
 	var winningMessage = "Guess my word correctly or lose your beer. Once you're out of beer the game is over.";
 	updateHeading.innerHTML = winningHeading;
 	updateMessage.innerHTML = winningMessage;
-}
+};
 
 
 
